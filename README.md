@@ -37,14 +37,14 @@ Use 4 space indents over tabs and write multi-line CSS/LESS
 
 At the top of stylesheets, create and maintain a table of contents which will detail the sections contained in the document, for example:
 
-    /*------------------------------------*\
-        Table of contents
-    \*------------------------------------*/
-    /**
-     * CONTENTS............You’re reading it!
-     * RESET...............Set our reset defaults
-     * FONT-FACE...........Import brand font files
-     */
+/*------------------------------------------------------------------------------
+TABLE OF CONTENTS:
+------------------------------------------------------------------------------
+1.0  - Reset
+2.0  - Typography
+3.0  - Header
+4.0  - Footer
+------------------------------------------------------------------------------*/
 
 
 ### Section titles
@@ -52,15 +52,15 @@ At the top of stylesheets, create and maintain a table of contents which will de
 For each section in the table of contents, create a corresponding section title so that other developers can easily skip to that section.
 
 
-    /*------------------------------------*\
-        RESET
-    \*------------------------------------*/
+/*------------------------------------------------------------------------------
+1.0 - Reset
+------------------------------------------------------------------------------*/
 
 
 
 ## Source order
 
-Try and write stylesheets in specificity order. This ensures that you take full advantage of inheritance and CSS’ first &lt;i&gt;C&lt;/i&gt;; the cascade.
+Try and write stylesheets in specificity order. This ensures that you take full advantage of inheritance and CSS’ first C; the cascade.
 
 A well ordered stylesheet will be ordered something like this:
 
@@ -114,7 +114,7 @@ An example (LESS):
 
 ## Naming conventions
 
-Generally, use hyphen delimited classes (e.g. '.foo-bar' rather than '.foo_bar' or '.fooBar'.
+Generally, use hyphen delimited classes (e.g. `.foo-bar` rather than `.foo_bar` or `.fooBar`.
 
 The exception to this may come from 3rd party plugins which do not follow this convention.
 
@@ -133,11 +133,11 @@ You should not prepended a selection with an element because:
 * They increase specificity.
 * They increase browser workload (decreasing performance).
 
-For example, you should not write 'ul.nav{}' if you can just have '.nav'. Using the prior means that you would have to write another selector to be able to use 'ol.nav'.
+For example, you should not write `ul.nav{}` if you can just have `.nav`. Using the prior means that you would have to write another selector to be able to use `ol.nav`.
 
 Of course sometimes you will _want_ to
 qualify a class with an element (e.g. if you have a generic `.error` class that needs to look different when applied to different elements (e.g.
-`.error{ color:#ff0000; }` `div.error{ padding:15px; }`)), but generally avoid it where possible.
+`.error{ color:#ff0000; }` `div.error{ padding:15px; }`), but generally avoid it where possible.
 
 
 ### Quasi-qualifying selectors
@@ -179,7 +179,7 @@ You should never apply any styles to a grid item, they are for layout purposes o
 **Shorthand CSS needs to be used with caution.**
 
 Generally, use shorthand when setting more than one attribute. For example, 
-use 'background-color:#ff0000;' if you only need to set the background colour. Use 'background: #ff0000 url(image.jpg) 0 0 no-repeat; if you need to set more than one attribute.
+use `background-color:#ff0000;` if you only need to set the background colour. Use `background: #ff0000 url(image.jpg) 0 0 no-repeat;` if you need to set more than one attribute.
 
 Be explicit in which properties you set and take care to not inadvertently unset others with shorthand. E.g. if you only want to remove the bottom margin on an element then there is no sense in setting all margins to zero with `margin:0;`.
 
@@ -241,9 +241,9 @@ selector.
 
 ## `!important`
 
-The use of '!important' should only ever be used proactively. That is, it should only be used when you only every want a selector to be styled in a certain way and want to ensure that the style is never overwritten. '!important should never be used reactively when you are using it to get yourself out of a hole.
+The use of `!important` should only ever be used proactively. That is, it should only be used when you only every want a selector to be styled in a certain way and want to ensure that the style is never overwritten. `!important` should never be used reactively when you are using it to get yourself out of a hole.
 
-For example, you may use '.error { colour: #ff0000!important}' as you know you will **always** want this selector to be styled with red text. 
+For example, you may use `.error { colour: #ff0000!important}` as you know you will **always** want this selector to be styled with red text. 
 
 
 ## Magic numbers and absolutes
@@ -253,7 +253,7 @@ A magic number is a number which is used because ‘it just works’. These are 
 because they rarely work for any real reason and are not usually very
 futureproof or flexible/forgiving. They tend to fix symptoms and not problems.
 
-For example, if you want to position an element at the bottom of it's parent you should never use something like '.more-info { top: 100px; }' just because it works. It would be much better to use '.more-info { top: 100%; } which would ensure that even if the parent element changed in size, the element would still be positioned at the bottom of it's parent.
+For example, if you want to position an element at the bottom of it's parent you should never use something like `.more-info { top: 100px; }` just because it works. It would be much better to use `.more-info { top: 100%; }` which would ensure that even if the parent element changed in size, the element would still be positioned at the bottom of it's parent.
 
 
 ## Conditional stylesheets
