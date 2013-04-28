@@ -37,6 +37,7 @@ Use 4 space indents over tabs and write multi-line CSS/LESS
 
 At the top of stylesheets, create and maintain a table of contents which will detail the sections contained in the document, for example:
 
+```
 /*------------------------------------------------------------------------------
 TABLE OF CONTENTS:
 ------------------------------------------------------------------------------
@@ -45,17 +46,17 @@ TABLE OF CONTENTS:
 3.0  - Header
 4.0  - Footer
 ------------------------------------------------------------------------------*/
-
+```
 
 ### Section titles
 
 For each section in the table of contents, create a corresponding section title so that other developers can easily skip to that section.
 
-
+```
 /*------------------------------------------------------------------------------
 1.0 - Reset
 ------------------------------------------------------------------------------*/
-
+```
 
 
 ## Source order
