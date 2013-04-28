@@ -9,7 +9,7 @@ The goal of this document is to outline guidelines to keep stylesheets maintaina
 * [CSS Document Anatomy](#css-document-anatomy)
 * [Source order](#source-order)
 * [Ruleset structure](#ruleset-structure)
-* [Naming conventions](#naming-conventions)
+* [Naming conventions and coding style](#naming-conventions-and-coding-style)
 * [Comments](#comments)
 * [Writing CSS](#writing-css)
 * [Shorthand](#shorthand)
@@ -26,10 +26,6 @@ The goal of this document is to outline guidelines to keep stylesheets maintaina
 ## CSS Document Anatomy
 
 When working with multiple developers on a project it is important to keep the structure unified.
-
-### General
-
-Use 4 space indents over tabs and write multi-line CSS/LESS
 
 ### Use one base CSS/LESS file, a file for an individual app, and a file for any unique styles on a page
 
@@ -113,11 +109,23 @@ An example (LESS):
 }
 
 
-## Naming conventions
+## Naming conventions and coding style
 
-Generally, use hyphen delimited classes (e.g. `.foo-bar` rather than `.foo_bar` or `.fooBar`.
+The following naming conventions should always be used. The only exception should be from code which come from or is related to any 3rd party plugins.
 
-The exception to this may come from 3rd party plugins which do not follow this convention.
+
+### Naming conventions
+
+Use hyphen delimited classes (e.g. `.foo-bar` rather than `.foo_bar` or `.fooBar`.
+
+
+### Coding style
+
+* Use 4 space indents over tabs
+* Write multi-line CSS/LESS
+* Put spaces after : in property declarations.
+* Put spaces before { in rule declarations.
+* Use hex color codes #000 unless using rgba.
 
 
 ## Comments
