@@ -71,13 +71,6 @@ A well ordered stylesheet will be ordered something like this:
 
 ## Ruleset structure
 
-* Use hyphen delimited class names
-* 4 space indented
-* Multi-line
-* Declarations in relevance (NOT alphabetical) order
-* Indent vendor prefixed declarations so that their values are aligned
-* Always include the final semi-colon in a ruleset
-
 An example (CSS):
 
 .search {
@@ -126,7 +119,10 @@ Use hyphen delimited classes (e.g. `.foo-bar` rather than `.foo_bar` or `.fooBar
 * Put spaces after : in property declarations.
 * Put spaces before { in rule declarations.
 * Use hex color codes #000 unless using rgba.
-
+* Use hyphen delimited class names
+* Declarations in relevance (NOT alphabetical) order
+* Indent vendor prefixed declarations so that their values are aligned
+* Always include the final semi-colon in a ruleset
 
 ## Comments
 
