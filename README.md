@@ -73,6 +73,7 @@ A well ordered stylesheet will be ordered something like this:
 
 An example (CSS):
 
+```
 .search {
     color: #333;
     padding: 3px 10px;
@@ -85,10 +86,11 @@ An example (CSS):
        -moz-border-radius: 5px;
             border-radius: 5px;
 }
+```
 
 
 An example (LESS):
-
+```
 .search {
     color: #333;
     padding: 3px 10px;
@@ -100,7 +102,7 @@ An example (LESS):
         .border-radius(5px); // Uses a mixin for vendor prefixes
     }
 }
-
+```
 
 ## Naming conventions and coding style
 
