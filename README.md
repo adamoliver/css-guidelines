@@ -95,7 +95,7 @@ An example (LESS):
     color: #333;
     padding: 3px 10px;
 
-    .search input {
+    input {
         padding: 3px
         border: 1px solid #ccc;
         background-color: #fff;
